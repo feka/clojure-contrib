@@ -53,6 +53,7 @@
   (is (= "FOObarFOO" (s/replace-by #"foo" s/upper-case  "foobarfoo"))))
 
 (deftest t-replace-first
+  (is (= "barbarfoo" (s/replace-first-str "foo" "bar" "foobarfoo")))
   (is (= "barbarfoo" (s/replace-first-re #"foo" "bar" "foobarfoo")))
   (is (= "FOObarfoo" (s/replace-first-by #"foo" s/upper-case "foobarfoo"))))
 

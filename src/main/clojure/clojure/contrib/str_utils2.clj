@@ -205,7 +205,7 @@
     [(class pattern) (class replacement)]))
 
 (defmethod replace-first [String String] [#^String s pattern replacement]
-  (.replaceFirst (re-matcher (Pattern/quote pattern) s) replacement))
+  (.replaceFirst (re-matcher (re-pattern (Pattern/quote pattern)) s) replacement))
 
 (defmethod replace-first [Pattern String] [#^String s re replacement]
   (.replaceFirst (re-matcher re s) replacement))

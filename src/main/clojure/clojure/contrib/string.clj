@@ -175,7 +175,7 @@
 (defn replace-first-str
   "Replace first occurance of substring a with b in s."
   [#^String a #^String b #^String s]
-  (.replaceFirst (re-matcher (Pattern/quote a) s) b))
+  (.replaceFirst (re-matcher (re-pattern (Pattern/quote a)) s) b))
 
 (defn replace-first-re
   "Replace first match of re in s."
